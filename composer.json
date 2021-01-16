@@ -1,0 +1,12 @@
+{
+    "name": "ebcms/form-builder",
+    "license": "Apahce-2.0",
+    "autoload": {
+        "psr-4": {
+            "Ebcms\\FormBuilder\\": "src/"
+        }
+    },
+    "require": {
+        "ebcms/template": "^1.0"
+    }
+}
