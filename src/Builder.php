@@ -70,11 +70,15 @@ class Builder
         {$autocomplete?' autocomplete="on"':' autocomplete="off"'}
         {$novalidate?' novalidate="novalidate"':''}
         >
-            {foreach $items as $row}
-            {$row}
-            {/foreach}
-            <div class="mt-2">
-                <button type="submit" class="btn btn-primary">{$submit_text??'提交'}</button>
+            <div style="padding-bottom:50px;">
+                {foreach $items as $row}
+                {$row}
+                {/foreach}
+            </div>
+            <div class="mt-2 py-2 fixed-bottom bg-white">
+                <div class="container-xl">
+                    <button type="submit" class="btn btn-primary px-4">{$submit_text??'提交'}</button>
+                </div>
             </div>
         </form>
     </div>
