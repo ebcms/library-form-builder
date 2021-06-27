@@ -53,7 +53,7 @@ class Tab implements ItemInterface
 </ul>
 <div class="tab-content">
     {foreach $tabs as $key => $vo}
-    <div class="tab-pane fade py-2 {if !$key}show active{/if}" id="{$vo.key}" role="tabpanel" aria-labelledby="{$vo.key}-tab">{$vo.items}</div>
+    <div class="tab-pane fade py-2 {if !$key}show active{/if}" id="{$vo.key}" role="tabpanel" aria-labelledby="{$vo.key}-tab">{echo $vo['items']}</div>
     {/foreach}
 </div>
 str;
