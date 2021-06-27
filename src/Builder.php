@@ -72,7 +72,7 @@ class Builder
         >
             <div style="padding-bottom:50px;">
                 {foreach $items as $row}
-                {$row}
+                {echo $row}
                 {/foreach}
             </div>
             <div class="mt-2 py-2 fixed-bottom bg-white">
