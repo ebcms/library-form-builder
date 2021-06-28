@@ -26,8 +26,8 @@ class Email implements ItemInterface
     private function getTpl(): string
     {
         return <<<'str'
-<div class="form-group">
-    <label for="field_{:md5($name)}">{$label}</label>
+<div class="mb-3">
+    <label for="field_{:md5($name)}" class="form-label">{$label}</label>
     <input
         type="email"
         class="form-control"
@@ -53,7 +53,7 @@ class Email implements ItemInterface
     </datalist>
     {/if}
     {if isset($help) && $help}
-    <small id="help_{:md5($name)}" class="form-text text-muted">{$help}</small>
+    <div id="help_{:md5($name)}" class="form-text">{$help}</div>
     {/if}
 </div>
 str;

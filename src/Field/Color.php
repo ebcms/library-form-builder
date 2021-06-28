@@ -26,8 +26,8 @@ class Color implements ItemInterface
     private function getTpl(): string
     {
         return <<<'str'
-<div class="form-group">
-    <label for="field_{:md5($name)}">{$label}</label>
+<div class="mb-3">
+    <label for="field_{:md5($name)}" class="form-label">{$label}</label>
     <input
         type="color"
         class="form-control"
@@ -42,7 +42,7 @@ class Color implements ItemInterface
         aria-describedby="help_{:md5($name)}"
     >
     {if isset($help) && $help}
-    <small id="help_{:md5($name)}" class="form-text text-muted">{$help}</small>
+    <div id="help_{:md5($name)}" class="form-text">{$help}</div>
     {/if}
 </div>
 str;

@@ -42,12 +42,18 @@ class Code implements ItemInterface
             mode: "htmlmixed",
             indentUnit: 4,
             indentWithTabs: true,
+            lineWrapping: true,
         });
     }
 </script>
+<style>
+.CodeMirror {
+    height: 550px;
+}
+</style>
 {/if}
-<div class="form-group">
-    <label for="field_{:md5($name)}">{$label}</label>
+<div class="mb-3">
+    <label for="field_{:md5($name)}" class="form-label">{$label}</label>
     <textarea
         class="form-control d-none"
         id="field_{:md5($name)}"
@@ -64,7 +70,7 @@ class Code implements ItemInterface
     >{$value}</textarea>
     <div class="bg-light p-4 text-secondary" onclick="$(this).remove();render_code('field_{:md5($name)}')"><svg t="1611996487173" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6178" width="18" height="18"><path d="M242.752 268.8l90.496 90.496-152.256 152.256 152.256 152.192-90.496 90.496L0 511.552zM780.992 268.8l-90.56 90.496 152.256 152.256-152.256 152.192 90.56 90.496 242.688-242.688z" fill="#425766" p-id="6179"></path><path d="M513.024 192h128l-128 640h-128z" fill="#9AA8B3" p-id="6180"></path></svg> 点此编辑</div>
     {if isset($help) && $help}
-    <small id="help_{:md5($name)}" class="form-text text-muted">{$help}</small>
+    <div id="help_{:md5($name)}" class="form-text">{$help}</div>
     {/if}
 </div>
 str;

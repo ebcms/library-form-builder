@@ -138,8 +138,8 @@ function pic_upload(key){
 }
 </script>
 {/if}
-<div class="form-group">
-    <label for="field_{:md5($name)}">{$label}</label>
+<div class="mb-3">
+    <label for="field_{:md5($name)}" class="form-label">{$label}</label>
     <input type="text" class="form-control d-none" name="{$name}" value="{$value}" id="field_{:md5($name)}">
     <div class="overflow-hidden" id="pics_container_{:md5($name)}"></div>
     <div class="py-3">
@@ -153,7 +153,7 @@ function pic_upload(key){
         });
     </script>
     {if isset($help) && $help}
-    <small id="help_{:md5($name)}" class="form-text text-muted">{$help}</small>
+    <div id="help_{:md5($name)}" class="form-text">{$help}</div>
     {/if}
 </div>
 str;

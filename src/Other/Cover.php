@@ -31,8 +31,8 @@ class Cover implements ItemInterface
     private function getTpl(): string
     {
         return <<<'str'
-<div class="form-group">
-    <label for="field_{:md5($name)}">{$label}</label>
+<div class="mb-3">
+    <label for="field_{:md5($name)}" class="form-label">{$label}</label>
     <input type="text" class="form-control d-none" name="{$name}" value="{$value}" id="field_{:md5($name)}">
     {if !isset($GLOBALS['_loadholder'])}
     {php $GLOBALS['_loadholder']=1}
@@ -110,7 +110,7 @@ class Cover implements ItemInterface
         });
     </script>
     {if isset($help) && $help}
-    <small id="help_{:md5($name)}" class="form-text text-muted">{$help}</small>
+    <div id="help_{:md5($name)}" class="form-text">{$help}</div>
     {/if}
 </div>
 str;

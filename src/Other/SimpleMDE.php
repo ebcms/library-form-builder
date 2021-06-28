@@ -41,8 +41,8 @@ class SimpleMDE implements ItemInterface
 </style>
 {php $GLOBALS['simplemdeload']=1}
 {/if}
-<div class="form-group">
-    <label for="field_{:md5($name)}">{$label}</label>
+<div class="mb-3">
+    <label for="field_{:md5($name)}" class="form-label">{$label}</label>
     <textarea
         class="form-control"
         id="field_{:md5($name)}"
@@ -58,7 +58,7 @@ class SimpleMDE implements ItemInterface
         aria-describedby="help_{:md5($name)}"
     >{$value}</textarea>
     {if isset($help) && $help}
-    <small id="help_{:md5($name)}" class="form-text text-muted">{$help}</small>
+    <div id="help_{:md5($name)}" class="form-text">{$help}</div>
     {/if}
 </div>
 <script>

@@ -47,7 +47,7 @@ class Tab implements ItemInterface
 <ul class="nav {$class}" role="tablist">
     {foreach $tabs as $key => $vo}
     <li class="nav-item" role="presentation">
-        <a class="nav-link {if !$key}active{/if}" id="tab_{$vo.key}" data-toggle="tab" href="#{$vo.key}" role="tab" aria-controls="{$vo.key}" aria-selected="{if !$key}true{else}false{/if}">{$vo.label}</a>
+        <a class="nav-link {if !$key}active{/if}" id="tab_{$vo.key}" data-bs-toggle="tab" href="#{$vo.key}" role="tab" aria-controls="{$vo.key}" aria-selected="{if !$key}true{else}false{/if}">{$vo.label}</a>
     </li>
     {/foreach}
 </ul>
