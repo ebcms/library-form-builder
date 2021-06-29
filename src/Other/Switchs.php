@@ -63,7 +63,7 @@ class Switchs implements ItemInterface
 <div class="bg-light p-3 mb-3">
 {foreach $switchs as $key => $vo}
 <div id="{$key}" {if $vo['value'] != $value}class="d-none"{/if}>
-{$vo.items}
+{echo $vo['items']}
 </div>
 {/foreach}
 </div>
