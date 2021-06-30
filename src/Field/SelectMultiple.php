@@ -35,7 +35,7 @@ class SelectMultiple implements ItemInterface
             multiple
             name="{$name}[]"
             id="field_{:md5($name)}"
-            class="custom-select"
+            class="form-select"
             {if isset($title) && $title}title="{$title}" {/if}
             {if isset($required) && $required}required {/if}
             {if isset($readonly) && $readonly}readonly {/if}
