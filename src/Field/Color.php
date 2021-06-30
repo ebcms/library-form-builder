@@ -30,7 +30,7 @@ class Color implements ItemInterface
     <label for="field_{:md5($name)}" class="form-label">{$label}</label>
     <input
         type="color"
-        class="form-control"
+        class="form-control form-control-color"
         id="field_{:md5($name)}"
         name="{$name}"
         value="{$value}"
