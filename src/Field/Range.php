@@ -45,7 +45,7 @@ class Range implements ItemInterface
     <label for="field_{:md5($name)}" class="form-label">{$label}</label>
     <input
         type="range"
-        class="custom-range"
+        class="form-range"
         id="field_{:md5($name)}"
         name="{$name}"
         value="{$value}"
