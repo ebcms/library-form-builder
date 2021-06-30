@@ -56,8 +56,7 @@ class Builder
 <body>
     <div class="{$class??'container-xxl'}">
         {if isset($title) && $title}
-        <div class="display-4 my-4">{$title}</div>
-        <hr>
+        <div class="my-4 h1">{$title}</div>
         {/if}
         <form
         action="{$action??''}"
@@ -70,15 +69,11 @@ class Builder
         {$autocomplete?' autocomplete="on"':' autocomplete="off"'}
         {$novalidate?' novalidate="novalidate"':''}
         >
-            <div style="padding-bottom:50px;">
-                {foreach $items as $row}
-                {echo $row}
-                {/foreach}
-            </div>
-            <div class="mt-2 py-2 fixed-bottom bg-white">
-                <div class="container-xl">
-                    <button type="submit" class="btn btn-primary px-4">{$submit_text??'提交'}</button>
-                </div>
+            {foreach $items as $row}
+            {echo $row}
+            {/foreach}
+            <div class="mt-2 py-2">
+                <button type="submit" class="btn btn-primary">{$submit_text??'提交'}</button>
             </div>
         </form>
     </div>
